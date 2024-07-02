@@ -3,6 +3,6 @@ document.getElementById('sendMessageInput').addEventListener('change', (event) =
     topic: 'modalInput',
     value: event.target.value
 }
+window.parent.postMessage(message, '*');
 });
 
-window.parent.postMessage(message, '*');
