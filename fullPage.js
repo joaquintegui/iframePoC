@@ -18,6 +18,8 @@ window.addEventListener("message", (event) => {
     console.log(JSON.stringify(event));
     const data = event.data;
     if(data.topic == 'modalInput'){
+        console.log('funciona');
+        console.log(data.value);
         document.getElementById('LargeModalInput').innerHTML = data.value;
     }
 });
