@@ -15,6 +15,7 @@ document.getElementById('openSmallModalButton').addEventListener('click', functi
 });
 
 window.addEventListener("message", (event) => {
+    console.log('funciona?');
     console.log(JSON.stringify(event));
     const data = event.data;
     if(data.topic == 'modalInput'){
