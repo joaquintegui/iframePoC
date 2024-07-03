@@ -32,7 +32,7 @@ window.addEventListener("message", (event) => {
 });
 
 document.getElementById('openLargeModalButton').addEventListener('click', function() {
-    document.getElementById(id).classList.add('open');
+    document.getElementById('modal').classList.add('open');
     document.body.classList.add('jw-modal-open');
 });
 
