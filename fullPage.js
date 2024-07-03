@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const oppId = urlParams.get('oppId')
+console.log('run');
 
 document.getElementById('openLargeModalButton').addEventListener('click', function() {
     const message = {
