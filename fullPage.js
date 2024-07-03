@@ -32,6 +32,7 @@ window.addEventListener("message", (event) => {
 });
 
 document.getElementById('openLargeModalButton').addEventListener('click', function() {
+    console.log('modalopen');
     document.getElementById('modal').classList.add('open');
     document.body.classList.add('jw-modal-open');
 });
