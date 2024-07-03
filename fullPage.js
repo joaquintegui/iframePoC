@@ -34,7 +34,7 @@ window.addEventListener("message", (event) => {
 document.getElementById('openLargeModalButton').addEventListener('click', function() {
     document.getElementById(id).classList.add('open');
     document.body.classList.add('jw-modal-open');
-}
+});
 
 var sleep = duration => new Promise(resolve => setTimeout(resolve, duration))
 var poll = (promiseFn, duration) => promiseFn().then(
