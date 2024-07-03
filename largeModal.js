@@ -1,5 +1,4 @@
-//GET OPPID FROM PARAMS
-
+const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const oppId = urlParams.get('oppId')
 
