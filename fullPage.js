@@ -30,3 +30,10 @@ window.addEventListener("message", (event) => {
         document.getElementById('LargeModalInput').innerHTML = data.value;
     }
 });
+
+var sleep = duration => new Promise(resolve => setTimeout(resolve, duration))
+var poll = (promiseFn, duration) => promiseFn().then(
+             sleep(duration).then(() => poll(promiseFn, duration)))
+
+// Greet the World every second
+poll(() => new Promise(() => console.log('Still Running')), 1000)
