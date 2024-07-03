@@ -35,7 +35,7 @@ document.getElementById('openModalInIframe').addEventListener('click', function(
     console.log('modalopen');
     document.getElementById('modal').classList.add('open');
     document.body.classList.add('jw-modal-open');
-    
+
     const message = {
         topic: 'openInternalModal',
         oppId: oppId,
@@ -63,3 +63,10 @@ var poll = (promiseFn, duration) => promiseFn().then(
 
 // Greet the World every second
 poll(() => new Promise(() => console.log('Still Running')), 1000)
+
+window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'do you really want to quit?';
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+});
