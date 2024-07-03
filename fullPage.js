@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(queryString);
+const oppId = urlParams.get('oppId')
+
 document.getElementById('openLargeModalButton').addEventListener('click', function() {
     const message = {
         topic: 'openLargeModal'
@@ -8,19 +11,16 @@ document.getElementById('openLargeModalButton').addEventListener('click', functi
 
 document.getElementById('openSmallModalButton').addEventListener('click', function() {
     const message = {
-        topic: 'openSmallModal'
+        topic: 'openSmallModal',
+        oppId: oppId,
     };
 
     window.parent.postMessage(message, '*');
 });
 
 window.addEventListener("message", (event) => {
-    console.log('funciona?');
-    console.log(JSON.stringify(event));
     const data = event.data;
-    if(data.topic == 'modalInput'){
-        console.log('funciona');
-        console.log(data.value);
+    if(data.topic == 'modalInput' && data.oppId == oppId ){
         document.getElementById('LargeModalInput').innerHTML = data.value;
     }
 });
