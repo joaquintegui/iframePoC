@@ -22,6 +22,8 @@ document.getElementById('openSmallModalButton').addEventListener('click', functi
 
 window.addEventListener("message", (event) => {
     const data = event.data;
+    console.log(data.oppId);
+    console.log(oppId);
 
     if(data.topic == 'modalInput' && data.oppId == oppId ){
         document.getElementById('LargeModalInput').innerHTML = data.value;
