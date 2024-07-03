@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fullPage.css" />
+    <script src="fullPage.js"></script>
+
     <title>Full Page</title>
 </head>
 <body>
     <button id="openLargeModalButton">Open Large Modal</button>
     <button id="openSmallModalButton">Open Small Modal</button>
+    <button id="openModalInIframe">Open Modal in Iframe</button>
+
+    <div id="modal" class="jw-modal">
+        <div class="jw-modal-body">
+            <h1>A custom modal popup</h1>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
 
     <h1 id="LargeModalInput"></h1>
 
-    <script src="fullPage.js"></script>
 </body>
 </html>
