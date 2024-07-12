@@ -64,9 +64,4 @@ var poll = (promiseFn, duration) => promiseFn().then(
 // Greet the World every second
 poll(() => new Promise(() => console.log('Still Running')), 1000)
 
-window.addEventListener("beforeunload", function (e) {
-    var confirmationMessage = 'do you really want to quit?';
 
-    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-});
